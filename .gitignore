@@ -1,0 +1,35 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment Variables
+.env
+.env.local
+
+# Databases and Local Storage
+database/logs.db
+storage/faiss_index/
+
+# OS files
+.DS_Store
+Thumbs.db
+~$*
+
+# IDE
+.vscode/
+.idea/
+
+# Uploaded documents
+uploads/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
