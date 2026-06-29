@@ -43,110 +43,147 @@ def setup_page():
         .main-header {
             font-size: 2.2rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #c084fc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.25rem;
+            letter-spacing: -0.02em;
         }
         .subheader {
-            font-size: 1.1rem;
-            color: #6b7280;
+            font-size: 1.05rem;
+            color: #9ca3af;
             margin-bottom: 1.5rem;
         }
 
-        /* ── Status Badges ── */
+        /* ── Sidebar Section Headers ── */
+        .sidebar-section {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #a78bfa;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+        }
+
+        /* ── Status Badges (dark-mode safe) ── */
         .status-ready {
             display: inline-block;
-            padding: 0.2rem 0.6rem;
+            padding: 0.3rem 0.75rem;
             border-radius: 1rem;
             font-size: 0.8rem;
             font-weight: 600;
-            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-            color: #065f46;
+            background: rgba(52, 211, 153, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.3);
         }
         .status-pending {
             display: inline-block;
-            padding: 0.2rem 0.6rem;
+            padding: 0.3rem 0.75rem;
             border-radius: 1rem;
             font-size: 0.8rem;
             font-weight: 600;
-            background: linear-gradient(135deg, #fef3c7, #fde68a);
-            color: #92400e;
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
         }
         .status-error {
             display: inline-block;
-            padding: 0.2rem 0.6rem;
+            padding: 0.3rem 0.75rem;
             border-radius: 1rem;
             font-size: 0.8rem;
             font-weight: 600;
-            background: linear-gradient(135deg, #fecaca, #fca5a5);
-            color: #991b1b;
+            background: rgba(248, 113, 113, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.3);
         }
 
-        /* ── Chat Styling ── */
-        .chat-user {
-            background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-            border-radius: 1rem;
-            padding: 0.8rem 1rem;
-            margin-bottom: 0.5rem;
-            border-left: 4px solid #7c3aed;
-        }
-        .chat-assistant {
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-            border-radius: 1rem;
-            padding: 0.8rem 1rem;
-            margin-bottom: 0.5rem;
-            border-left: 4px solid #0284c7;
-        }
-
-        /* ── Citation Block ── */
+        /* ── Citation Block (dark-mode) ── */
         .citation-block {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
             border-radius: 0.5rem;
-            padding: 0.6rem 0.8rem;
-            margin: 0.3rem 0;
+            padding: 0.75rem 1rem;
+            margin: 0.4rem 0;
             font-size: 0.85rem;
+            color: #d1d5db;
         }
         .citation-header {
             font-weight: 600;
-            color: #475569;
+            color: #a78bfa;
             font-size: 0.8rem;
+            margin-bottom: 0.3rem;
         }
 
-        /* ── Metric Cards ── */
-        .metric-card {
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-            border: 1px solid #e2e8f0;
-            border-radius: 0.75rem;
-            padding: 1rem;
-            text-align: center;
-        }
-        .metric-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .metric-label {
-            font-size: 0.85rem;
-            color: #6b7280;
-            margin-top: 0.2rem;
-        }
-
-        /* ── Pipeline Stage ── */
-        .pipeline-stage {
+        /* ── Pipeline Status Items ── */
+        .pipeline-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.4rem 0;
+            padding: 0.3rem 0;
             font-size: 0.9rem;
+            color: #d1d5db;
+        }
+        .pipeline-done {
+            color: #34d399;
+        }
+        .pipeline-pending {
+            color: #6b7280;
         }
 
-        /* ── Sidebar Tweaks ── */
-        section[data-testid="stSidebar"] {
-            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        /* ── Sidebar Brand ── */
+        .sidebar-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.15rem;
+        }
+        .sidebar-tagline {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        /* ── Slider Accent Color ── */
+        .stSlider > div > div > div > div {
+            background-color: #818cf8 !important;
+        }
+        .stSlider [data-testid="stThumbValue"] {
+            color: #c084fc !important;
+        }
+
+        /* ── Metric Styling ── */
+        [data-testid="stMetricValue"] {
+            color: #a78bfa !important;
+        }
+
+        /* ── Tab Styling ── */
+        .stTabs [data-baseweb="tab"] {
+            color: #9ca3af;
+        }
+        .stTabs [aria-selected="true"] {
+            color: #a78bfa !important;
+        }
+
+        /* ── Buttons ── */
+        .stButton > button[kind="primary"] {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+            border: none !important;
+            color: white !important;
+            font-weight: 600 !important;
+            border-radius: 0.5rem !important;
+            transition: all 0.2s ease !important;
+        }
+        .stButton > button[kind="primary"]:hover {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+        }
+
+        /* ── Divider ── */
+        hr {
+            border-color: rgba(99, 102, 241, 0.15) !important;
         }
         </style>
         """,
@@ -191,18 +228,18 @@ def init_session_state():
 def render_sidebar():
     """Render the sidebar with upload, settings, and pipeline status."""
     st.sidebar.markdown(
-        '<div style="font-size:1.4rem;font-weight:700;'
-        'background:linear-gradient(135deg,#667eea,#764ba2);'
-        '-webkit-background-clip:text;-webkit-text-fill-color:transparent;">'
-        '📄 Document Explorer</div>',
+        '<div class="sidebar-brand">📄 Document Explorer</div>'
+        '<div class="sidebar-tagline">AI-powered document Q&A with RAG</div>',
         unsafe_allow_html=True,
     )
-    st.sidebar.caption("AI-powered document Q&A with RAG")
 
     st.sidebar.markdown("---")
 
     # ── Document Upload ──
-    st.sidebar.markdown("### 📁 Document Source")
+    st.sidebar.markdown(
+        '<div class="sidebar-section">📁 Document Source</div>',
+        unsafe_allow_html=True,
+    )
     source_option = st.sidebar.radio(
         "Select source",
         options=["Upload a Custom PDF", "Use Sample Financial Report"],
@@ -222,7 +259,7 @@ def render_sidebar():
             with open(pdf_path, "wb") as f:
                 f.write(uploaded_file.getbuffer())
         else:
-            st.sidebar.info("Upload a PDF to begin.")
+            st.sidebar.info("📎 Upload a PDF to begin.")
     else:
         pdf_path = os.path.join(project_root, "tests", "sample_report.pdf")
         if not os.path.exists(pdf_path):
@@ -249,7 +286,10 @@ def render_sidebar():
     st.sidebar.markdown("---")
 
     # ── Chunking Settings ──
-    st.sidebar.markdown("### ⚙️ Chunking Settings")
+    st.sidebar.markdown(
+        '<div class="sidebar-section">⚙️ Chunking Settings</div>',
+        unsafe_allow_html=True,
+    )
     chunk_size = st.sidebar.slider(
         "Max Chunk Size (chars)",
         min_value=200, max_value=3000, value=1000, step=100,
@@ -267,7 +307,10 @@ def render_sidebar():
     st.sidebar.markdown("---")
 
     # ── Retrieval Settings ──
-    st.sidebar.markdown("### 🔍 Retrieval Settings")
+    st.sidebar.markdown(
+        '<div class="sidebar-section">🔍 Retrieval Settings</div>',
+        unsafe_allow_html=True,
+    )
     top_k = st.sidebar.slider(
         "Top-K Results",
         min_value=1, max_value=10, value=4,
@@ -282,7 +325,10 @@ def render_sidebar():
     st.sidebar.markdown("---")
 
     # ── Pipeline Status ──
-    st.sidebar.markdown("### 🔄 Pipeline Status")
+    st.sidebar.markdown(
+        '<div class="sidebar-section">🔄 Pipeline Status</div>',
+        unsafe_allow_html=True,
+    )
     _render_pipeline_status()
 
     # ── API Status ──
