@@ -1,6 +1,6 @@
 # RAG Orchestration Engine (Module 4 & 5)
-# Module 4: Context Retriever — FAISS similarity search
-# Module 5: RAG Prompt Orchestrator — Gemini API integration
+# Module 4: Context Retriever — FAISS similarity search with score filtering
+# Module 5: RAG Prompt Orchestrator — Gemini 2.0 Flash API integration
 
 import os
 import time
